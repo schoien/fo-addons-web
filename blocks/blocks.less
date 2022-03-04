@@ -1,0 +1,60 @@
+@color-lightback: #f0f0f0;
+@color-main: #005985;
+@color-main-light: #51a5ca;
+
+// CTA BOX ROW
+@bracke-cta: 840px;
+.ctaboxline-wrapper{
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  @media (max-width: @bracke-cta) {
+    flex-wrap: wrap;
+  }
+  div{position: relative;}
+}
+.ctabox{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin: 0 2em 2em 0;
+  flex-basis: 20%;
+  flex-grow: 1;
+  &:last-of-type{margin-right: 0;}
+  @media (max-width: @bracke-cta) {
+    flex-basis: 40%;
+    &:nth-child(even){ 
+      margin-right: 0; 
+    }
+  }
+  @media (max-width: (@bracke-cta/2)) {
+    margin-bottom: 1em;
+    &:nth-child(odd){ 
+      margin-right: 1em; 
+    }
+  }
+}
+.ctaboximage{
+  margin: 2em 2em 1em;
+  text-align: center;
+  flex-grow: 1;
+  img{
+    max-width: 100%;
+    max-height: 150px;
+  }
+}
+.ctaboxtitle{
+  margin: 0 2em 0.5em;
+  flex-basis: 60px;
+  flex-grow: 0;
+  text-align: center;
+}
+.ctaboxlink{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
