@@ -17,4 +17,7 @@ function my_acf_init_block_types() {
     }
 }
 
+add_theme_support('editor-styles');
+add_editor_style( 'blocks/blocks.css' );
+
 ?>
